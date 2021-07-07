@@ -1,0 +1,48 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="demoRoutingapp.controller.FirstPage">
+	<App>
+		<pages>
+			<Page title="Main Page - Customer Details">
+				<content>
+			<!--<Button text="Navigation" press="OnPress"/> -->
+					<Table headerText="Customer List"
+					 noDataText="No data found" 
+					 id="__table0"
+					 items="{/Customers}"
+					  >
+					    <items>
+					        <ColumnListItem id="__item0"  press="OnPress" type="Navigation">
+					        <cells>
+					                <Text text="{CustomerID}" id="__text0"/>
+					                <Text text="{CompanyName}" id="__text1"/>
+					                <Text text="{Address}" id="__text2"/>
+					                <Text text="{City}" id="__text3"/>
+					                </cells>
+					        </ColumnListItem>
+					        </items>
+					    <columns>
+					        <Column id="__column0">
+					            <header>
+					                <Label text="CustomerID" id="__label0"/>
+					            </header>
+					        </Column>
+					        <Column id="__column1">
+					            <header>
+					                <Label text="Company Name" id="__label1"/>
+					            </header>
+					        </Column>
+					        <Column id="__column2">
+					            <header>
+					                <Label text="Address" id="__label2"/>
+					            </header>
+					        </Column>
+					        <Column id="__colum3">
+					            <header>
+					                <Label text="City" id="__label3"/>
+					            </header>
+					        </Column>
+					        </columns></Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

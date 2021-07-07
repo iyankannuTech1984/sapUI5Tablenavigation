@@ -1,0 +1,45 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"
+	controllerName="demoRoutingapp.controller.SecondPage">
+	<App>
+		<pages>
+			<Page title="Customer - Order Details" showNavButton="true" navButtonPress="onNavButtonPressed">
+				<content>
+					<Table noDataText="No order found" id="__table0" items="{Orders}">
+						<items>
+							<ColumnListItem id="__item0">
+								<cells>
+									<Text text="{OrderID}" id="__text1"/>
+									<Text text="{OrderDate}" id="__text2"/>
+									<Text text="{ShippedDate}" id="__text3"/>
+									<Text text="{ShipName}" id="__text4"/>
+									</cells>
+							</ColumnListItem>
+						</items>
+						<columns>
+							<Column id="__column0">
+								<header>
+									<Label text="Order ID" id="__label0"/>
+								</header>
+							</Column>
+							<Column id="__column1">
+								<header>
+									<Label text="Order Date" id="__label1"/>
+								</header>
+							</Column>
+							<Column id="__column2">
+								<header>
+									<Label text="Shipping Date" id="__label2"/>
+								</header>
+							</Column>
+							<Column id="__column3">
+								<header>
+									<Label text="Shipper Name" id="__label3"/>
+								</header>
+							</Column>
+						</columns>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
